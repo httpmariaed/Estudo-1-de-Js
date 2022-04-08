@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+  }
+  
+  .container {
+    width: 100vw;
+    height: 100vh;
+    background: #FFF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .box-center {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: solid 1px #000;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .input {
+    margin: 5px;
+  }

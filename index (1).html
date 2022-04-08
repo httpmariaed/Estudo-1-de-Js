@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./functions.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="box-center">
+        <h1>Cadastro de alunos</h1>
+        <input id="name" value="" class="input" type="text" placeholder="Digite o nome:">
+        <input id="register" value="" class="input" type="number" placeholder="Digite o RA:">
+        <input id="years" value="" class="input" type="number" placeholder="Digite a idade:">
+
+        <select class="input" value="" name="Gênero" id="gender">
+          <option value="Feminino">Feminino</option>
+          <option value="Masculino">Masculino</option>
+        </select>
+
+        <input id="medium" value="" class="input" type="number" placeholder="Digite a média:">
+
+        <select class="input" value="" name="Resultado" id="result">
+          <option value="Aprovado">Aprovado</option>
+          <option value="Reprovado">Reprovado</option>
+        </select>
+
+        <button id="button" onclick="mandarDados()" class="input" type="submit">Cadastrar</button>
+        <button onclick="getReport()" type="submit">Exibir relatórios</button>
+        <button onclick="clean()" type ="submit" id = "limparCampos">Limpar</button>
+    </div>
+  </div>
+</body>
+</html>
