@@ -1,5 +1,7 @@
 let botao = document.getElementById("button")
 let limpar = document.getElementById("limparCampos")
+let exibirNomes = document.getElementById("exibirNomes")
+let exibirRa = document.getElementById("exibirra")
 
 let pass, comps, trocas 
 
@@ -25,7 +27,8 @@ function mandarDados() {
 }
 
 function relatorio() {
-  console.log(novosEstudantes);
+  console.log(novosEstudantes)}
+
     function bubbleSort(novosEstudantes, fnComp){
       pass = 0, comps = 0, trocas = 0 
 
@@ -49,11 +52,22 @@ function relatorio() {
       } while(trocou)
     
     }
-    bubbleSort(novosEstudantes, (elem1, elem2) => elem1.name > elem2.name)
-}
+    
 
-console.log(novosEstudantes)
-//console.log(`A ordem crescente é ${novosEstudantes}`)
+
+  function bubbleSortNomes(){
+  bubbleSort(novosEstudantes, (elem1, elem2) => elem1.name > elem2.name)
+  document.getElementById('exibirNomes').innerHTML = JSON.stringify(novosEstudantes, null, 4);
+  }
+
+  function bubbleSortRA(){
+    bubbleSort(novosEstudantes, (elem1, elem2) => elem1.register < elem2.register)
+    document.getElementById('exibirra').innerHTML = JSON.stringify(novosEstudantes, null, 4);
+  }
+
+    console.log(novosEstudantes)
+    
+
 
 function clean(){
   novosEstudantes = []
