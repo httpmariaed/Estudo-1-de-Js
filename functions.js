@@ -74,13 +74,13 @@ function relatorio() {
   
 
   let aprovados = []
-for (let val of novosEstudantes){
-    if (val.result == 'Aprovado'){
+    for (let val of novosEstudantes){
+      if (val.result == 'Aprovado'){
         aprovados.push(val)
     } 
 }
 
-aprovados.sort(function(a,b) {
+  aprovados.sort(function(a,b) {
     return a.name< b.name ? -1 : a.name > b.name ? 1 : 0;
 });
 
@@ -89,6 +89,6 @@ aprovados.sort(function(a,b) {
     
 
 
-function clean(){
+  function clean(){
   novosEstudantes = []
 }
