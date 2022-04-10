@@ -34,4 +34,16 @@ table{
 }
 table th{
   background-color: rgb(151, 150, 150);
+  padding: 1px 5px;
+  text-align: left;
+}
+table th, td{
+  padding: 1px 5px;
+  text-align: left;
+}
+table td img{
+  width: 22px;
+}
+.center{
+  text-align: center;
 }

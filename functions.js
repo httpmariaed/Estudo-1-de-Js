@@ -4,9 +4,6 @@ let exibirNomes = document.getElementById("exibirNomes")
 let exibirRa = document.getElementById("exibirra")
 let exibirAprov = document.getElementById("exibirAprov")
 
-
-
-
 let pass, comps, trocas 
 
 let novosEstudantes = [];
@@ -64,29 +61,50 @@ function relatorio() {
 
   function bubbleSortNomes(){
   bubbleSort(novosEstudantes, (elem1, elem2) => elem1.name > elem2.name)
-  //document.getElementById('exibirNomes').innerHTML = JSON.stringify(novosEstudantes, null, 4);
+  adicionarTabela()
   }
 
   function bubbleSortRA(){
     bubbleSort(novosEstudantes, (elem1, elem2) => elem1.register < elem2.register)
-    //document.getElementById('exibirra').innerHTML = JSON.stringify(novosEstudantes, null, 4);
+    adicionarTabela()
+  }
+
+  function aprovados(){
+    bubbleSortNomes(novosEstudantes, (elem1, elem2) => elem1.result  != elem2.result )
+    adicionarTabela()
+    
   }
   
 
-  let aprovados = []
-    for (let val of novosEstudantes){
-      if (val.result == 'Aprovado'){
-        aprovados.push(val)
-    } 
-}
+    function adicionarTabela(){
+      let tbody = document.getElementById('tbody')
+      tbody.innerText = '';
+      
+      for(let i = 0; i < novosEstudantes.length; i++ ){
+        let tr = tbody.insertRow()
+        
+        let td_name = tr.insertCell()
+        let td_register = tr.insertCell()
+        let td_years = tr.insertCell()
+        let td_gender = tr.insertCell()
+        let td_medium = tr.insertCell()
+        let td_result = tr.insertCell()
 
-  aprovados.sort(function(a,b) {
-    return a.name< b.name ? -1 : a.name > b.name ? 1 : 0;
-});
 
-  
+        td_name.innerText = novosEstudantes[i].name
+        td_register.innerText = novosEstudantes[i].register
+        td_years.innerText = novosEstudantes[i].years
+        td_gender.innerText = novosEstudantes[i].gender
+        td_medium.innerText = novosEstudantes[i].medium
+        td_result.innerText = novosEstudantes[i].result  
+
+      }
+    }
+
+   
    console.log(novosEstudantes)
     
+
 
 
   function clean(){

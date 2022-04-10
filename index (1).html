@@ -28,16 +28,12 @@
           <option value="Reprovado">Reprovado</option>
         </select>
 
-        <button id="button" onclick="mandarDados()" class="input" type="submit">Cadastrar</button>
+        <button id="button" onclick= "mandarDados()" class="input" type="submit">Cadastrar</button>
         <button  id = "exibirNomes"class = "input" onclick="bubbleSortNomes()" type="submit"> Relatórios nomes</button>
         <button  id = "exibirra" class = "input" onclick="bubbleSortRA()" type="submit"> Relatórios RA</button>
-        <button  id = "exibirAprov" class = "input" onclick="aprovados" type="submit"> Relatórios dos Aprovados</button>
-        <button  class = "input" onclick="clean()" type ="submit" id = "encerrar">Encerrar</button>
+        <button  id = "exibirAprov" class = "input" onclick="aprovados()" type="submit"> Relatórios dos Aprovados</button>
+        <button  class = "input" onclick="adicionarTabela()" type ="submit" id = "encerrar">Mostrar Tabela</button>
          
-
-    </div>
-
-  </div>
         <div class="conteudo">
           <table border="1">
             <thead>
@@ -47,21 +43,18 @@
               <th>Gênero</th>
               <th>Média</th>
               <th>Situação</th>
-              <th>Ações</th>
             </thead>
-            <tbody>
-              <tr>
-                <td>Vínicius</td>
-                <td>1234</td>
-                <td>19</td>
-                <td>Macho Alfa</td>
-                <td>10</td>
-                <td>Aprovado</td>
-                <td></td>
-              </tr>
+            <tbody id="tbody">
+              
             </tbody>
+            
+
           </table>
           
         </div>
+
+    </div>
+
+ 
 </body>
 </html>
